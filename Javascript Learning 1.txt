@@ -1,0 +1,172 @@
+//if else conditions
+var rain = true
+if(rain)
+{
+    console.log("Take the Umberlla")
+}
+else 
+{
+    console.log("Enjoy the sunshine")
+}
+
+var Homework = false
+if(Homework)
+{
+    console.log("Yes finished the homework")
+}
+else 
+{
+    console.log("No didnt complete")
+}
+
+var cookies = false
+if(cookies)
+{
+    console.log("Would you like Cookie")
+}
+else
+{
+    console.log("Time to bake more cookies")
+}
+
+var teeth=true
+if(teeth)
+{
+    console.log("Your teeth are clean")
+}
+else
+{
+    console.log("Go brush your teeth now")
+}
+
+//variables
+var price = 2;
+var product = "Fridge";
+var tax = 20;
+var total = price+tax;
+console.log(total);
+console.log(product);
+
+var Fruitname = "Orange";
+var count = 10;
+var price = 300;
+var total = count*price;
+console.log(Fruitname);
+console.log(total);
+
+//Preincrement
+let x=5;
+let y = ++x;
+console.log(y)
+
+let h = 100;
+let l = --h;
+console.log(l);
+
+//postincrement
+let r = 30;
+let p = r++;
+console.log(p);
+console.log(r)
+
+let a = 10;
+let b= a--;
+console.log(b);
+console.log(a);
+
+//function
+
+function value()
+{
+    console.log("Function is working");
+}
+value()
+
+function samsung()
+{
+    console.log("This is samsung phone")
+}
+samsung()
+
+function iphone()
+{
+    console.log("This is iphone")
+}
+iphone()
+
+function oppo()
+{
+    console.log("This is oppo")
+}
+oppo()
+
+function apple()
+{
+    console.log("The apple is red")
+}
+function orange()
+{
+    console.log("The fruit is orange")
+}
+apple();
+orange();
+
+//function with Concatenation and parameters
+
+function area(len,bre) 
+{ 
+    var p = len*bre 
+console.log("Area is:" + len) 
+    
+} 
+var length = 300; 
+var breadth = 200; 
+area(300,200)
+
+var favoractor = "Sanjay"; 
+var favourFootPlay = "Raj"; 
+var favourmovie = "Story"; 
+console.log("Favourite actor: " + favoractor); 
+console.log("Favourite Football Player: " + favourFootPlay);
+console.log("Favourite Movie:" + favourmovie);
+
+//Function call with return and parameters
+
+function add(a,b)
+{
+    return(a+b);
+}
+var tot = add(70000,200);
+console.log(tot);
+
+function div(a,b)
+{
+    return(a*b);
+}
+var total = div(30,2);
+console.log(total)
+
+//function
+var u=30;
+var w =20;
+function add()
+{
+    console.log(u+w);
+}
+add()
+
+//return
+function myname()
+{
+    return "Santhiya"
+}
+var na = myname();
+console.log(na)
+
+function add(a,b)
+{
+    return(a+b);
+}
+var total = add(100,200);
+console.log(total)
+
