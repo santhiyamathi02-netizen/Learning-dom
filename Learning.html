@@ -1,0 +1,67 @@
+DOM:
+<p id ="title">
+Hello World
+</p>
+<script>
+var tag = document.getElementById("title")
+console.log(tag.textContent)
+tag.textContent = "Bye World"
+</script>
+
+
+<h1 id ="h1"> 
+Hello World
+</h1>
+<button> 
+change 
+</button>
+<script>
+//selecting h1 tag
+var h1 = document.getElementById("h1")
+console.log(h1.textContent)
+function change()
+{
+h1.textContent = "Bye World"
+}
+change()
+</script>
+
+<input id ="num1" value="20">
+<input id ="num2" value="30">
+<button onclick="resultfunction()">add
+</button>
+<p id="result">Result
+</p>
+<script>
+var box1 =document.getElementById("num1")
+var box2 =document.getElementById("num2")
+var result =document.getElementById("result")
+
+var box1value =Number(box1.value)
+var box2value =Number(box2.value)
+var total = box1value+box2value
+
+function resultfunction()
+{
+
+result.textContent=total
+}
+</script>
+
+<h1 id ="h1"> 
+Hello World
+</h1>
+<button onclick="change()"> 
+change 
+</button>
+<script>
+//selecting h1 tag
+var h1 = document.getElementById("h1")
+console.log(h1.textContent)
+function change()
+{
+h1.textContent = "Bye World"
+}
+</script>
+
+
