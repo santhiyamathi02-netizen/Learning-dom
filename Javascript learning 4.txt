@@ -1,0 +1,153 @@
+//Level 3: Loops & Mathematical Operations
+//Assignment 7: Factorial Calculator
+function calculate(factorialnumber)
+{
+    if(typeof factorialnumber !=="number")
+    {
+        return "error message enter a valid number"
+    }
+
+{
+    let result = 1;
+    for(let a=1; a <= factorialnumber; a++)
+    {
+    result = result*a
+}
+return (result);
+}
+}
+console.log(calculate(5));
+
+//Write a function sumOfDigits(num) that returns the sum of all digits of the number.
+function sumofdigits(num1) {
+    if (typeof num1 !== "number") {
+        return "error message enter a valid number";
+    }
+
+    let str = num1.toString();
+    let value = 0;
+
+    for (let u = 0; u < str.length; u++) {
+        value += Number(str[u]);
+    }
+
+    return value;
+}
+
+console.log(sumofdigits(456));
+
+//Write a function countDigits(num) that returns how many digits the number has.
+function countdigits(number)
+{
+if(typeof number !== "number")
+{
+    return "Error message enter a valid number"
+}
+let str = number.toString();
+let sum = 0;
+for (let r =0; r < str.length; r++)
+{
+sum++
+}
+return sum;
+}
+console.log(countdigits(78945));
+
+//check if a number is a palindrome
+function ispalindrome(k)
+{
+    let str = k.toString();
+    let num = 0;
+    for (let b =0; b < str.length; b++)
+    {
+        num += Number (str[b]);
+    }
+    return num;
+}
+console.log(ispalindrome(121));
+
+function palindrome(palvalue)
+{
+let str = palvalue.toString();
+let reversed = str.split("").reverse().join("");
+{
+    if (str = reversed)
+    {
+        return palvalue+ "is a palindrome";
+    }
+    else 
+    {
+        return palvalue+ "is not a palindrome";
+    }
+}
+}
+console.log(palindrome(121));
+//
+let x=3.4;
+let y=4;
+let z= x+y;
+console.log(z);
+
+let r = 10/ "Apple";
+isNaN(r);
+console.log(r);
+
+//
+let myNumber= 16;
+myNumber.toString(32);
+myNumber.toString(16);
+myNumber.toString(12);
+myNumber.toString(10);
+myNumber.toString(8);
+console.log(myNumber);
+
+// Convert Fahrenheit to Celsius:
+function toCelsius(fahrenheit) {
+  return (5/9) * (fahrenheit-32);
+}
+
+//even or odd
+var value = 5;
+if(value %2==0)
+{
+    console.log("The number is Even")
+}
+else
+{
+    console.log("The number is odd")
+}
+
+function numbers(val)
+{
+    if(val %2==0)
+    {
+        return "The number even";
+    }
+    else
+    {
+        return "The number odd";
+    }
+}
+console.log(numbers(5))
+
+//Reverse a string
+function reverse(number)
+{
+    if(typeof number !=="number")
+    {
+    return "Enter a valid Number";
+    }
+let str = number.toString();
+let reversed = str.split("").reverse().join("");
+{
+    return reversed;
+}
+}
+console.log(reverse(123));
+
+//count vowels
+function vowels(value)
+{
+    let vow = "aeiouAEIOU"
+}
+//NOT YET COMPELTED
