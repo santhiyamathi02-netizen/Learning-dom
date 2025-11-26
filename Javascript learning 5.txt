@@ -1,0 +1,160 @@
+//Level 3: Loops & Mathematical Operations
+//Assignment 7: Factorial Calculator
+function calculator(factorial)
+{
+  if (typeof factorial !== "number")
+      return "Enter a valid number";
+  
+  let result =1;
+  for(let i=1; i <= factorial; i++)
+  {
+      result *=i;
+  }
+  return result;
+}
+console.log(calculator(5));
+
+//Assignment 8: Prime Number Checker
+function prime(number)
+{
+    if (typeof number !=="number")
+    {
+        return "Enter a valid number";
+    }
+    for(let p=2; p < number; p++)
+    {
+       if(number % p === 0)
+    {
+    return false;
+}
+}
+return true;
+}
+console.log(prime(7));
+
+//even or odd
+function val(num)
+{
+    if(num % 2==0)
+    {
+        return "The number is even";
+    }
+    else
+    {
+        return "The number is odd";
+    }
+}
+console.log(val(8))
+
+function val(num1)
+{
+    if(num1 % 2==1)
+    {
+        return "The number is odd";
+    }
+    else
+    {
+        return "The number is even";
+    }
+}
+console.log(val(5));
+
+//positive or negative
+function posneg(val)
+{
+    if(typeof val !== "number")
+    {
+    return "Enter a valid number";
+    }
+    if(val > 0)
+    {
+        return "The number is positive";
+    }
+    else if (val < 0)
+    {
+        return "The number is negative";
+    }
+    else
+    {
+        return "The number is zero";
+    }
+    
+    }
+console.log(posneg(100));
+
+//Write a function that takes two numbers and returns the largest one.
+function largest(a,b)
+{
+    if(typeof a !=="number")
+    {
+    return "Enter a valid number";
+    }
+    if(a>b)
+    {
+        return a + "largest";
+    }
+    else if(b>a)
+    {
+        return b + "largest";
+    }
+    else
+    {
+        return "Both are equal"
+    }
+    
+}
+console.log(largest(20,50));
+
+//Assignment 9: Fibonacci Sequence
+function fibonacci(n)
+{
+    if(typeof n !== "number" || n <= 0)
+    {
+    return "Enter a valid number"
+}
+if(n ==1 || n==2)
+{
+    return 1;
+}
+let a =1;
+let b =1;
+let next;
+for(let i=3; i <=n; i++)
+{
+    next= a+b;
+    a=b;
+    b=next;
+}
+return b;
+}
+console.log(fibonacci(6));
+
+//date
+const d = new Date();
+console.log("Today is:" +d);
+
+//Only (year&month) 1995-05-15
+const date = new Date();
+const day = date.getDate();
+const month = date.getMonth() + 1; 
+const year = date.getFullYear();
+console.log(day + "-" + month + "-" + year);
+
+//print current time
+const now = new Date();
+let hours = now.getHours();
+let  minutes = now.getMinutes();
+let  seconds = now.getSeconds();
+console.log(hours + ":" + minutes + ":" +seconds);
+
+//print only current month
+const month1 = new Date().getMonth() + 1;
+console.log(month1);
+
+//print only current day
+const s = new Date().getDate();
+console.log(s);
+
+//print only current year
+const r = new Date().getFullYear();
+console.log(r);
