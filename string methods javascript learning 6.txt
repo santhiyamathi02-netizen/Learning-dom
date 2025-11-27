@@ -1,0 +1,214 @@
+//even or odd
+function value(number)
+{
+    if(typeof number !== "number")
+    {
+    return "Enter a valid number"
+    }
+    if(number % 2==0)
+{
+    return "The number is even";
+}
+    else
+    {
+        return "The number is odd";
+    }
+}
+console.log(value(8));
+
+function value1(number1)
+{
+    if(typeof number1 !=="number")
+    {
+        return "Enter a valid number"
+    }
+    if(number1 % 2 ==1)
+    {
+        return "The number is odd";
+    }
+    else
+    {
+        return "The number is even";
+    }
+}
+console.log(value1(5));
+
+//Sum of Digits
+function sumofdigits(num)
+{
+    let string = num.toString();
+    let sum = 0;
+    for(let i=0; i < string.length; i++)
+    {
+        sum +=Number(string[i])
+    }
+    return sum;
+    }
+    console.log(sumofdigits(123));
+
+//Write a JavaScript function called sumOfDigits() that takes a number as input and returns the sum of its digits.
+//The function should first check whether the input is a valid number.
+//If it is not a number, return an error message.
+//If it is a valid number, convert the number into a string, loop through each digit, convert each digit back to a number, and add all digits together.
+//Finally, return the total sum.
+function sumanddigits(val)
+{
+    if(typeof val !== "number")
+    {
+        return "enter a valid number";
+    }
+    {
+    let str = val.toString();
+    let value = 0;
+    for(let m=0; m < str.length; m++)
+    {
+        value +=Number(str[m]);
+    }
+    return value;
+}
+}
+console.log(sumanddigits(482))
+
+//Write a function that reverses the digits of a number.
+function digits(num)
+{
+    if(typeof num !== "number")
+        return "Enter a valid number";
+{
+let reversed = num.toString().split("").reverse().join("")
+    return reversed;
+}
+}
+console.log(digits(12345));
+
+//Write a JavaScript function that takes a string as input and returns the reversed version of that string. You should convert the string into an array, reverse the order of characters using a loop or built-in methods, and join them back together. Make sure the function handles empty strings as well.
+function string(a)
+{
+    if(typeof a !== "string")
+    return "Enter a valid String";
+{
+    let reverse = a.split("").reverse().join("")
+    return reverse;
+}
+}
+console.log(string("santhiya"));
+
+//Write a function that checks whether a given string is a palindrome. A palindrome reads the same forwards and backwards (example: "madam"). Convert the string to lowercase, reverse it, and compare both versions. If they match, return true; otherwise return false.
+function palindrome(string)
+{
+    let str = string.toLowerCase();
+
+    let reverse = str.split("").reverse().join("")
+    return string === reverse;
+}
+console.log(palindrome("madam"));
+
+//Build a function that takes a sentence and returns the total number of words in it. You should remove extra spaces and split the sentence based on a single space. The function must handle cases where multiple spaces exist between words.
+function totalnumber(sentence)
+{
+    let reverse = sentence.split("").reverse().join("")
+    return reverse.length;
+}
+console.log(totalnumber("i like apple"));
+
+//Write a function that replaces every space in a sentence with a hyphen (-). First split the string by spaces, then join the words back using a hyphen. Use trim() to remove any extra spaces at the beginning or end of the sentence.
+function a (b)
+{
+    let space = b.trim();
+    let reverse = space.split(" ").join("-")
+    return reverse;
+}
+console.log(a("I am the Doctor"));
+
+//Create a function that finds the longest word in a sentence. Split the sentence into an array of words, loop through them, and compare lengths. Return the word with the greatest number of characters.
+function longestword(sentence)
+{
+    let words = sentence.split(" ");
+    let longest = words[0];
+    for(let i=0; i < words.length; i++)
+    {
+        if(words[i].length > longest.length)
+        {
+            longest = words[i];
+        }
+    }
+    return longest;
+}
+console.log(longestword("I am the Developer"));
+
+//Count the number of characters in a string
+function characters(number)
+{
+    if(typeof number !== "string")
+        return "enter a valid string";
+    return number.length;
+}
+console.log(characters("apple"));
+
+//Write a function that returns the first letter of a string
+function letter(string)
+{
+    if(typeof string !== "string")
+    {
+        return "Enter a valid String";
+    }
+    //let caps = str.toUpperCase()
+        return string.charAt(0).toLowerCase();
+}
+    console.log(letter("Hello my Computer"));
+    
+//Write a function that returns the last letter of a string
+function lastletter(letter)
+{
+    if(typeof letter !== "string")
+    {
+        return "Enter the string";
+    }
+    return letter.charAt(letter.length -1);
+}
+console.log(lastletter("santhiya"));
+
+//Convert a string completely to uppercase
+function uppercase(value)
+{
+    if(typeof value !== "string")
+    {
+        return "Enter the valid string";
+    }
+    return value.toUpperCase();
+}
+console.log(uppercase("helloworld"));
+
+//Convert a string completely to lowercase
+function lowercase(str)
+{
+    if(typeof str !== "string")
+    {
+        return "Enter a valid value";
+    }
+    return str.toLowerCase();
+}
+console.log(lowercase("I AM THE ORANGE"));
+
+//Check if a string contains the letter "a"
+function letter(char)
+{
+    if(typeof char !== "string")
+    {
+        return "Enter a valid value";
+    }
+    return char.includes("a");
+}
+console.log(letter("car"));
+console.log(letter("vit"));
+
+//Combine (join) two strings
+function twostr()
+{
+    let name1 = "Orange ";
+    let name2 = "hello my computer";
+    let name3 = "poweroff";
+return name1.concat(name2);
+}
+console.log (twostr());
+
