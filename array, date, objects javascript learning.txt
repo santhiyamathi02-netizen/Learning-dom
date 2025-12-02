@@ -1,0 +1,281 @@
+let fruits =["apple","banana","orange"]
+console.log (fruits);
+
+let numbers = new Array (1,2,3,4)
+console.log(numbers)
+
+const fruit = ["apple", "banana", "orange", "lemon"]
+let size = fruit.length;
+console.log(size);
+
+const name =["santhiya", "kirthi", "latha", "kumar"]
+console.log(name);
+console.log(name.length);
+
+//Return the first item in an array
+let value =["orange", "apple", "lemon"];
+let firstvalue= value.shift();
+console.log(firstvalue);
+
+//Return the last item in an array
+let grossery =["pen", "pencil", "eraser"];
+let last= grossery.pop();
+
+
+//Add a new item to the beginning of an array
+const nums =[1,2,3,4,5,6];
+nums.unshift(0);
+console.log(nums)
+
+//Add a new item to the end of an array
+let flowers = ["Rose", "lotus"];
+flowers.push("sunflower");
+console.log(flowers);
+
+//Remove the last item
+const items = ["a", "b", "c"];
+let lastitem = items.pop();
+console.log(items)
+
+//Create an array of 5 fruits. Print the first element.
+let frut = ["apple","banana","orange","watermelon"];
+console.log(frut);
+
+//Print the last item of an array (without using pop).
+const food =["idli","dosa","biriyani"];
+let foods = food[food.length -1];
+console.log(foods);
+
+//Find the length of an array.
+let names =["santhiya", "akill","arjun", "vignesh","dinesh"]
+let len = names.length;
+console.log(len)
+
+//Add one item to the end using push().
+let mat =["car","bike","cycle"];
+mat.push("auto");
+console.log(mat);
+
+//Remove the last item using pop().
+let value1 =[1,2,3,4,5,6,7,8,9,10]
+let remove = value1.pop();
+console.log(remove);
+console.log(value1);
+
+//Add one item at the beginning using unshift().
+const month =["feburary","march","april","may","june"];
+month.unshift("january");
+console.log(month);
+
+//Access the 3rd element in an array.
+const year =[2021,2022,2023,2024,2025];
+let select = year[4];
+console.log(select);
+
+//Change the value of the second index item.
+const months =["january","feburay","ma","aprill","may","june","july"];
+months[2]="march";
+console.log(months);
+
+//Create an array of 5 numbers and print only even numbers.
+let array =[1,2,3,4,5];
+    for(let num of array)
+    {
+        if(num %2==0)
+        {
+            console.log(num);
+        }
+    }
+    
+//Create an array of names and print only names starting with "S".
+    const names1 =["santhiya","kirthi","vaishu","shiva"];
+    for(let nam of names1)
+    {
+        if(nam.startsWith("s"))
+        {
+            console.log(nam)
+        }
+    }
+    
+//Find the index of "banana" in an array of fruits.
+let fruites = ["apple","banana","orange","watermelon"];
+let index = fruites.indexOf("banana");
+console.log(index)
+
+//Check if an array contains "blue" using includes().
+const colours =["pink","orange","blue","white"];
+let fin = colours.includes("blue");
+console.log(fin);
+
+//Use slice() to return the first 3 items from an array.
+let channel =["sun","vijay","zee","colours","sunmusic"];
+let val = channel.slice(3);
+console.log(val);
+
+//Use splice() to remove 2 items starting from index 1.
+let numbersdat =[22,23,24,25,26,27,28,29,30];
+let index1 = numbersdat.splice(1,2);
+console.log(index1);
+console.log(numbersdat);
+
+//Use splice() to insert "mango" at index 2.
+let a=["apple","banana","watermelon","orange"];
+a.splice(2,0,"mango");
+console.log(a);
+
+//Combine two arrays using concat().
+const mon=["january","feb", "march","april","may","june","july","august","september","october","november","december"];
+const year1 =[2025,2026];
+let years = mon.concat(year1);
+console.log(years);
+
+//Convert an array into a string using join().
+let std =["akila","akalya","akill","arjun","bala"];
+let section =[ "a","b","c","d","e"];
+let join = std.join(",");
+let sec = section.join(",");
+console.log(join);
+console.log(sec);
+
+//Reverse an array WITHOUT using reverse().
+let v = [1,2,3,4,5,6,7,8,9,10];
+let reverse = [];
+for(let d of v)
+{
+    reverse.unshift(d);
+}
+console.log(reverse);
+
+//Find the sum of all numbers in an array (using loop).
+let t = [10,20,30,40,50,60];
+let sum =0;
+for(let num of t)
+{
+    sum += num;
+}
+console.log(sum);
+
+//Level 4: Date Operations
+//Assignment 10: Age Calculator
+    function age(birthdate) {
+    let today = new Date();
+    let dob = new Date(birthdate);
+
+    let currentage = today.getFullYear() - dob.getFullYear();
+    let month = today.getMonth() - dob.getMonth();
+
+    if (month < 0 || (month === 0 && today.getDate() < dob.getDate())) {
+        currentage--;
+    }
+
+    return currentage;
+}
+
+console.log(age('1997-03-22'));
+
+//Print today's date.
+let todaydate = new Date();
+let final = todaydate.getDate();
+console.log(todaydate);
+
+//Print the current year only.
+let yea = new Date();
+let currentYear = yea.getFullYear();
+console.log(currentYear);
+
+//Print the current month (1–12).
+let w = new Date();
+let currentmonth = w.getMonth()+1;
+console.log(currentmonth);
+
+//Print the current day of the month (1–31).
+let g = new Date();
+let i = g.getDate();
+console.log(i);
+
+//Print the current weekday (0–6).
+let n = new Date();
+let j = n.getDate();
+console.log(j);
+
+//Create a date object for your birthday and print it.
+let mybirthdate = new Date(2000, 7, 15);
+console.log(mybirthdate.toDateString());
+
+//Print the current time (hours, minutes, seconds).
+let time = new Date();
+let currenttime = time.getHours();
+let minutes = time.getMinutes();
+let seconds = time.getSeconds();
+console.log(currenttime, minutes, seconds);
+
+//Add 5 days to today’s date.
+let d = new Date();
+d.setDate(d.getDate()+5);
+console.log(d.toDateString());
+
+//arrow function
+function add(a,b)
+{
+    return a+b;
+}
+console.log(add(20,40));
+
+const che =(a,b) =>
+{
+    return a+b;
+}
+console.log(che(70,30))
+
+//Create an object called student with properties: name, age, and grade. Print the object.
+const student = {
+    name: "Raji",
+    age : 40,
+    grade: 'A'
+};
+console.log(student);
+
+//Create an object car with properties: brand, model, and year. Print only the brand.
+const car = {
+    brand: "Toyota",
+    model: "genz-02",
+    year: 2025,
+};
+console.log(car.brand);
+
+//Create an object person and add a new property city after creation.
+let person ={
+    name: "kirthi",
+    age: 25,
+}
+person.city = 'chennai',
+console.log(person)
+
+//Create an object mobile and update the property price to a new value.
+const mobile = {
+    brand: "samsung",
+    model: 2025,
+    price: 30000,
+}
+mobile.price = 40000,
+console.log(mobile)
+
+//Delete a property color from an object pen.
+let pen ={
+    brand: "Doms",
+    color: "Black",
+}
+delete pen.color,
+console.log(pen);
+
+//Create an object book with properties: title, author. Print: “The book is written by ____”.
+let book ={
+    title: "The continue",
+    author: "john",
+    print: function()
+    {
+        console.log(`The book is written by ${this.author}`);
+    }
+};
+book.print();
+
