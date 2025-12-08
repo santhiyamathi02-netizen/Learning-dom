@@ -1,0 +1,370 @@
+//Create an object calculator with methods add(), subtract(), multiply(), divide().
+let calculator ={
+    add: function(a,b)
+    {
+        return a+b;
+    },
+    subtract: function(a,b)
+    {
+        return a-b;
+    },
+    multiply: function(a,b)
+    {
+        return (a*b);
+    },
+    divide: function(a,b)
+    {
+        return (a/b)
+    }
+};
+console.log(calculator.add(20,30));
+console.log(calculator.subtract(50,20));
+console.log(calculator.multiply(30,2));
+console.log(calculator.divide(40,20));
+
+//Create an object employee that stores name, salary and a method increment() that adds ₹2000.
+let employee ={
+    name: "Selvam",
+    salary: 40000,
+    increment: function()
+    {
+        this.salary = this.salary + 2000;
+        return this.salary;
+    }
+};
+console.log(employee.increment());
+
+// Write a function that returns an object with properties name and age.
+function createperson(name,age)
+    {
+        return {
+        name: name,
+        age: age
+    };
+}
+let person1 = createperson("selvam", 40);
+console.log(person1);
+
+//Write a function that returns an object representing a product.
+function product()
+{
+    return{
+    productname: "Laptop",
+    price : 50000,
+    getdiscountprice: function() 
+    {
+      return this.price-(this.price *5/100);
+    }
+    };
+}
+let pro = product();
+console.log (pro.price);
+console.log(pro.getdiscountprice());
+
+//Write a function createCar() that returns an object with:a brand a model a start() method that prints:"Car started: BRAND MODEL"
+function createCar()
+{
+    return{
+        brand: "toyota",
+        model: "innova",
+        start: function()
+        {
+            return ("Car started:" + this.brand + " "+ this.model);
+        }
+    };
+}
+console.log(createCar().start());
+
+//Write a function createBankAccount() that returns an object with:accountHolder balance a method deposit(amount) that adds the amount to balance a method getBalance() that returns the updated balance
+function createBankAccount()
+{
+    return{
+        accountHolder: "santhiya",
+        amount: 50000,
+        depositamount: 2000,
+        getBalance: function()
+        {
+            let bal= this.amount+this.depositamount;
+            return ("Your current Balance:" +bal)
+        }
+        
+    };
+}
+console.log(createBankAccount().getBalance());
+
+//Write a function createStudent() that returns an object with: a name a marks property a method addMarks(score) → adds score to marks a method getResult() → returns "Total Marks: ___"
+function createstudent()
+{
+    return{
+        name: "Raj",
+        subject: "tam",
+        marks: 95,
+        addMarks: function(score)
+        {
+                this.marks += score;
+            },
+        getresult: function()
+        {
+            return ("Total Marks is:"+this.marks);
+        }
+    }
+}
+    let student1 = createstudent();
+    student1.addMarks(20);
+    console.log(student1.getresult());
+    
+//Write a function createBook() that returns an object with:title author pages readPages(num) → increases read pages remainingPages() → returns "Pages left: ___"
+function createbook()
+{
+    return{
+        title: "The book",
+        author: "Johnpal",
+        pages: 130,
+        pagesread:0,
+        readpages: function(num)
+        {
+            this.pagesread += num
+        },
+        remainingpages: function()
+        {
+            return "Pages left:"+(this.pages-this.pagesread);        }
+    }
+}
+let libray = createbook();
+libray.readpages(30);
+console.log(libray.remainingpages());
+
+//createPhone() Write a function createPhone() that returns an object with: brand battery (100 by default) use(minutes) → reduces battery (1% per minute) charge(percent) → increases battery (max 100) getBattery() → returns "Battery: ___%"
+function phone()
+{
+    return{
+        brand: "samsung",
+        battery: 100,
+        use: function(minutes)
+        {
+            this.battery -= minutes;
+            if(this.battery<0){
+                this.battery=0;
+            }
+        },
+        charge: function(percent)
+        {
+            this.battery += percent;
+            if(this.battery>100)
+            {
+                this.battery=100
+            }
+            },
+       getbattery: function()
+       {
+           return "The battery:"+this.battery+"%";
+       }
+    }
+}
+       let pho = phone();
+       pho.use(20);
+       pho.charge(10);
+       console.log(pho.getbattery());
+       
+//Write a function createWallet() that returns an object with:balance addMoney(amount) spendMoney(amount) (check balance before deducting) getBalance() → "Balance: Rs.___"
+function wallet()
+{
+    return{
+    balance : 6000,
+    addmoney: function(amount)
+    {
+        this.balance += amount;
+    },
+    spendmoney: function(amount)
+    {
+        if(this.balance >= amount)
+        {
+            this.balance -= amount;
+        }
+        else{
+            console.log("not enough balance");
+        }
+    },
+    getbalance: function()
+    {
+        return "balance Rs."+this.balance;
+    }
+};
+}
+let g = wallet();
+g.addmoney(1000);
+g.spendmoney(500);
+console.log(g.getbalance());
+
+//SECTION A: Fundamentals (15 points) Problem 1: Number Range Sum (3 points) Write a function that calculates the sum of all numbers in a given range (inclusive).// Example:// sumRange(1, 5) should return 15 (1+2+3+4+5)// sumRange(10, 15) should return 75 Test cases: 	sumRange(1, 5) 	sumRange(10, 15) 	sumRange(7, 7)
+function sumrange(start,end)
+{
+    let sum=0;
+    for(let i=start; i<=end; i++)
+    {
+    sum +=i;
+}
+
+return sum;
+}
+console.log(sumrange(10,15));
+
+//testcases
+function sum(a,b)
+{
+    let val=0;
+    for(let i=a; i<=b; i++)
+    {
+        val +=i;
+    }
+    return val;
+}
+console.log(sum(1,5))
+
+//testcases
+function num(c,d)
+{
+    let num1 =0;
+    for(let i=c; i<=d; i++)
+    {
+        num1 += i;
+    }
+    return num1;
+}
+console.log(num(8,8))
+
+//Problem 2: String Reverser (3 points) Create a function that reverses a string without using built-in reverse methods.// Example:// reverseString('hello') should return 'olleh'// reverseString('JavaScript') should return 'tpircSavaJ' Test cases: ●	reverseString('hello') ●	reverseString('JavaScript') ●	reverseString('12345')
+function reverse (number)
+{
+    let string = number.toString();
+    let reversed = string.split("").reverse().join("");
+    {
+        return reversed;
+    }
+}
+console.log(reverse("hello"))
+
+function reverseString(str) {
+    let reversed = "";
+
+    for (let i = str.length - 1; i >= 0; i--) {
+        reversed += str[i];
+    }
+
+    return reversed;
+}
+
+console.log(reverseString("hello"));
+
+function reversestring(str)
+{
+    let reversed ="";
+    for(let i=str.length -1; i>=0;i--)
+    {
+        reversed += str[i];
+    }
+    return reversed;
+}
+console.log(reversestring("JavaScript"));
+//Problem 2: String Reverser (3 points) Create a function that reverses a string without using built-in reverse methods. // Example:// reverseString('hello') should return 'olleh'// reverseString('JavaScript') should return 'tpircSavaJ' Test cases: ●	reverseString('hello') ●	reverseString('JavaScript')●	reverseString('12345')
+function reversestring(str)
+{
+    let reversed ="";
+    for(let i=str.length -1; i>=0;i--)
+    {
+        reversed += str[i];
+    }
+    return reversed;
+}
+console.log(reversestring("JavaScript"));
+
+//testcase
+function value(num)
+{
+    let number ="";
+    for(let i=num.length -1; i>=0; i--)
+    {
+        number += num[i];
+    }
+    return number;
+}
+console.log(value('12345'));
+
+//Create a function that counts how many vowels are present in a string. Do not use built-in methods like match() or filter()
+function vowels(count)
+{
+    let vow = "aeiouAEIOU";
+    let countvowels = 0;
+    for(let i=0; i < count.length; i++)
+    {
+    if(vow.includes(count[i]))
+    {
+        countvowels++;
+    }
+    }
+    return countvowels;
+}
+console.log(vowels("hello"))
+
+//Problem 3: Digit Sum Calculator (4 points) Write a function that calculates the sum of all digits in a number// Example:// sumDigits(123) should return 6 (1+2+3) // sumDigits(4567) should return 22 (4+5+6+7) Test cases:●	sumDigits(123)●	sumDigits(4567)●	sumDigits(9)
+function sumdigits(num)
+{
+    let str = num.toString();
+    let sum = 0;
+    for(let i=0; i < num.length; i++)
+    {
+        sum += Number(str[i]);
+    }
+    return sum;
+}
+console.log(sumdigits('123'));
+
+//test cases
+function calculate(num1)
+{
+    let string = num1.toString();
+    let sum1 = 0;
+    for(let i=0; i <string.length; i++)
+    {
+        sum1 += Number(string[i]);
+    }
+    return sum1;
+}
+console.log(calculate(4567));
+
+//testcases
+function val(num2)
+{
+    let str = num2.toString();
+    let total = 0;
+    for(let i=0; i< str.length; i++)
+    {
+        total +=Number(str[i]);
+    }
+    return total;
+}
+console.log(val(9));
+
+//Problem: Number Analyzer Write a function analyzeNumbers(nums) that:  Takes an array of numbers  Finds: sum of all numbers Count of even numbers
+    function analyzenumbers(nums)
+{
+    let sum = 0;
+    let evencount = 0;
+
+    for (let i = 0; i < nums.length; i++)
+    {
+        sum += nums[i];
+
+        if (nums[i] % 2 == 0)
+        {
+            evencount++;
+        }
+    }
+
+    return {
+        sum: sum,
+        evencount: evencount
+    };
+}
+
+console.log(analyzenumbers([1, 2, 3, 4, 5, 6]));
